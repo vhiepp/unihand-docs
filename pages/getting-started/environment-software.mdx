@@ -2,6 +2,8 @@
 sidebarTitle: Môi trường và công cụ
 ---
 
+import { Table, Td, Th, Tr } from "nextra/components";
+
 # Môi trường và công cụ phát triển
 
 ## Mục lục 🔍
@@ -60,7 +62,7 @@ npm là trình quản lý gói dành cho NodeJS.
 
 ### Noodl
 
-Một công cụ mã nguồn mở xây dựng ứng dụng web **Low-Code**, tạo nhanh ứng dụng một cách thông minh. Môi trường phát triển trực quan, hiện đại, không yêu cầu kỹ năng viết code.
+Một công cụ mã nguồn mở xây dựng ứng dụng web, trên nền tảng **Low-Code** tạo nhanh ứng dụng một cách thông minh. Với môi trường phát triển trực quan, hiện đại, không yêu cầu kỹ năng viết code.
 
 Truy cập trang chủ của [**Noodl**](https://www.noodl.net/) để xem thêm chi tiết.
 
@@ -74,7 +76,7 @@ Cài đặt công cụ **Noodl Editor** mới nhất [tại đây](https://githu
 
 ### Strapi
 
-**Strapi** là một headless CMS (Content Management System) mã nguồn mở được xây dựng bằng NodeJS, cho phép tạo và quản lý nội dung các API dễ dàng thông qua một giao diện quản trị trực quan.
+**Strapi** là một headless CMS (Content Management System) mã nguồn mở được xây dựng bằng NodeJS, cho phép tạo và quản lý nội dung các API dễ dàng thông qua một giao diện quản trị trực quan **(Low-Code)**.
 
 Truy cập trang chủ của **Strapi** [tại đây](https://strapi.io/).
 
@@ -86,8 +88,74 @@ Xem tài liệu hướng dẫn của **Strapi** [tại đây](https://docs.strap
 
 ### MySQL
 
+**MySQL** là một hệ quản trị cơ sở dữ liệu quan hệ (RDBMS - Relational Database Management System) mã nguồn mở, được phát triển bởi **Oracle Corporation**. Nó sử dụng ngôn ngữ **SQL** (Structured Query Language) để truy vấn và quản lý dữ liệu.
+
+Xem chi tiết và cài đặt [tại đây](https://www.mysql.com/).
+
+<div style={{ marginTop: 10 }}>
+  <img src="/img/mysql.png" style={{ margin: "0 auto" }} />
+</div>
+
 ### Docker
+
+**Docker** là một nền tảng mã nguồn mở giúp tạo, triển khai và chạy các ứng dụng trong container. Container chứa tất cả các thành phần cần thiết (code, thư viện, công cụ) để chạy ứng dụng, đảm bảo nó hoạt động ổn định trên bất kỳ môi trường nào.
+
+Xem chi tiết và cài đặt Docker tương thích với hệ điều hành [tại đây](https://www.docker.com/).
+
+<div style={{ marginTop: 10 }}>
+  <img src="/img/docker.png" style={{ margin: "0 auto" }} />
+</div>
 
 ### Docker Compose
 
+**Docker Compose** là một công cụ đi kèm với Docker, cho phép định nghĩa và quản lý nhiều container trong một ứng dụng thông qua một tệp cấu hình đơn giản (thường là docker-compose.yml).
+
+<div style={{ marginTop: 10 }}>
+  <img src="/img/docker-compose.png" style={{ margin: "0 auto" }} />
+</div>
+
+Xem chi tiết hướng dẫn [tại đây](https://docs.docker.com/compose/).
+
 ### Expo Go
+
+**Expo Go** là một ứng dụng di động trên điện thoại, một phần của hệ sinh thái **Expo**, giúp phát triển các ứng dụng **React Native** một cách nhanh chóng mà không cần cấu hình phức tạp.
+Ứng dụng Expo Go đóng vai trò như một trình chạy, cho phép thử nghiệm và chạy ứng dụng React Native trực tiếp trên điện thoại.
+
+<div style={{ marginTop: 10 }}>
+  <img src="/img/expo.png" style={{ margin: "0 auto" }} />
+</div>
+
+Tải ứng dụng:
+
+<Table
+  style={{
+    marginTop: 10,
+  }}
+>
+  <thead style={{ width: "100%" }}>
+    <Tr>
+      <Th style={{ width: 400 }}>Android</Th>
+      <Th style={{ width: 400 }}>iOS</Th>
+    </Tr>
+  </thead>
+  <tbody>
+    <Tr>
+      <Td>
+        <img
+          src="/img/expo-qr-android.png"
+          style={{ margin: "0 auto", width: 200 }}
+        />
+        Hoặc bấm [vào đây](https://play.google.com/store/apps/details?id=host.exp.exponent)
+        để tải.
+      </Td>
+      <Td>
+        <img
+          src="/img/expo-qr-ios.png"
+          style={{ margin: "0 auto", width: 200 }}
+        />
+        Hoặc bấm [vào đây](https://apps.apple.com/vn/app/expo-go/id982107779?l=vi)
+        để tải.
+      </Td>
+    </Tr>
+  </tbody>
+</Table>

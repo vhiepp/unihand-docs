@@ -1,5 +1,5 @@
 export default {
-  "install-environment": {
+  "environment-software": {
     description: "Get started with the basics of using the app",
   },
   "api-server": {
