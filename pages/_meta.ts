@@ -12,10 +12,8 @@ export default {
     title: "🌐 Deploy to server",
     description: "Learn how to deploy your app",
   },
-  license_link: {
+  license: {
     title: "📜 License",
-    href: "https://github.com/TVU-OPS/UniHand?tab=GPL-3.0-1-ov-file",
-    newWindow: true,
   },
   contributing: {
     title: "🤝 Contributing",
