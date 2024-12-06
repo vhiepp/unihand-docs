@@ -1,0 +1,75 @@
+import { Table, Td, Th, Tr } from "nextra/components";
+
+# **Triển khai dự án sử dụng Docker Compose**
+
+```bash
+# 1. Clone dự án
+git clone https://github.com/TVU-OPS/UniHand.git
+
+# 2. Di chuyển vào thư mục dự án
+cd UniHand
+
+# 3. Khởi tạo các biến môi trường cần thiết
+npm run genv
+
+# Sau khi khởi tạo xong, bạn có thể truy cập tệp tin .env hệ thống vừa tạo để sửa biến môi trường cho phù hợp.
+# Hoặc hệ thống sẽ lấy giá trị mặc định và vẫn hoạt động bình thường.
+
+# 4. Build và chạy dự án.
+docker compose up -d
+```
+
+Mặc định hệ thống sẽ chạy trên:
+
+- Trang chủ: [http://localhost](http://localhost).
+- Trang quản trị: [http://admin.localhost](http://admin.localhost).
+- Nếu trên môi trường server, bạn có thể thay đổi tên miền localhost thành IP hoặc tên miền của bạn trong tệp tin **.env** hệ thống vừa tạo ở **bước 3** tương ứng với hai biến môi trường **HOME_DOMAIN** và **ADMIN_DOMAIN**.
+
+#### Các Port hệ thống sử dụng sau khi đã chạy thành công
+
+<Table>
+  <thead>
+    <Tr>
+      <Th>Container</Th>
+      <Th>Port</Th>
+      <Th>Mô tả</Th>
+    </Tr>
+  </thead>
+  <tbody>
+    <Tr>
+      <Td>mysql-server</Td>
+      <Td>3306:3306</Td>
+      <Td>Server hệ quản trị cơ sở dữ liệu MySQL</Td>
+    </Tr>
+    <Tr>
+      <Td>server-strapi</Td>
+      <Td>1337:1337</Td>
+      <Td>
+        Server API, sử dụng <span style={{ fontWeight: "bold" }}>Strapi</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>web-home</Td>
+      <Td>82:80</Td>
+      <Td>
+        Trang chủ, sử dụng <span style={{ fontWeight: "bold" }}>Noodl</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>web-admin</Td>
+      <Td>81:80</Td>
+      <Td>
+        Trang quản trị, sử dụng{" "}
+        <span style={{ fontWeight: "bold" }}>Noodl</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>domain</Td>
+      <Td>80:80</Td>
+      <Td>
+        Proxy domain đến Trang chủ và Trang quản trị, sử dụng{" "}
+        <span style={{ fontWeight: "bold" }}>Nginx</span>
+      </Td>
+    </Tr>
+  </tbody>
+</Table>
